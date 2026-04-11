@@ -1,0 +1,61 @@
+@font-face{
+	font-family:DTF;
+	src:url(https://file.garden/Zlk30agh4hF11eOU/DTM-Mono.otf);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle farthest-corner at 50% 100%, #FFF8C7, #FFD57C);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#map { 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#mapsvg {
+    width: 1000px;
+    height: 1000px;
+}
+
+.papertext {
+    font-family: DTF;
+    font-size: 3px;
+    fill: rgb(82, 56, 48);
+}
+
+.zoomButton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    position: absolute;
+    border: 1px solid rgb(82, 56, 48);
+    background-color: rgb(255, 255, 255);
+    color: rgb(82, 56, 48);
+    font-size: 35px;
+    cursor: pointer;
+}
+.zoomButton:hover {
+    background-color: rgb(201, 192, 189);
+}
+.zoomButton:active {
+    background-color: rgb(170, 161, 158);
+}
+#zoomIn {
+    top: 0;
+    border-radius: 5px 5px 0px 0px;
+}
+#zoomOut {
+    top: 51px;
+    border-radius: 0px 0px 5px 5px;
+}
