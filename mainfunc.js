@@ -15,7 +15,7 @@ const panzoom = Panzoom(map, {
     panOnlyWhenZoomed: false,
     contain: 'outside',
     cursor: 'grab',
-    maxScale: 30,
+    maxScale: 20,
     minScale: 5
 });
 
@@ -52,7 +52,7 @@ zoomInBtn.addEventListener('click', panzoom.zoomIn);
 zoomOutBtn.addEventListener('click', panzoom.zoomOut);
 map.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
-panzoom.zoom(10);
+panzoom.zoom(8);
 
 document.getElementById('mapsvg').onclick = function(e) {
     var rect = e.target.getBoundingClientRect();

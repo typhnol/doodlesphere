@@ -13,10 +13,23 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    z-index: -2;
 }
 a{
     text-decoration: none;
 }
+
+#particles-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .popup {
     background-color: #272727b0;
     color: white;
@@ -60,6 +73,7 @@ a{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    z-index: 100;
 }
 #mapsvg {
     width: 1000px;
