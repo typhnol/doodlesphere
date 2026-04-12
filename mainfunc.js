@@ -14,14 +14,14 @@ const panzoom = Panzoom(map, {
     zoomSpeed: 0.1,
     panOnlyWhenZoomed: false,
     contain: 'outside',
-    cursor: 'default',
+    cursor: 'grab',
     maxScale: 30,
-    minScale: 1
+    minScale: 5
 });
 
 var rects = map.querySelectorAll('rect');
 
-for (var i = 0; i < rects.length-2; i++) {
+for (var i = 0; i < rects.length; i++) {
     var rect = rects[i];
     var rectX = rect.getAttribute('x');
     var rectY = rect.getAttribute('y');
@@ -52,8 +52,7 @@ zoomInBtn.addEventListener('click', panzoom.zoomIn);
 zoomOutBtn.addEventListener('click', panzoom.zoomOut);
 map.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
 
-panzoom.zoom(1);
-panzoom.pan(500, 500);
+panzoom.zoom(10);
 
 document.getElementById('mapsvg').onclick = function(e) {
     var rect = e.target.getBoundingClientRect();
@@ -61,3 +60,20 @@ document.getElementById('mapsvg').onclick = function(e) {
     var y = Math.round(e.clientY - rect.top);
     console.log('x="' + x + '" y="' + y + '"');
 }
+
+
+
+window.addEventListener("load", function() {
+    var isDismissed = sessionStorage.getItem("popupDismissed");
+
+    if (!isDismissed) {
+        setTimeout(function() {
+            document.querySelector(".popup").style.display = "block";
+        }, 0);
+    }
+});
+
+document.querySelector("#confirm").addEventListener("click", function() {
+    sessionStorage.setItem("popupDismissed", "true");
+    document.querySelector(".popup").style.display = "none";
+});

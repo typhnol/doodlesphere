@@ -14,6 +14,47 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+a{
+    text-decoration: none;
+}
+.popup {
+    background-color: #272727b0;
+    color: white;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    font-family: DTF;
+    display: none; 
+    text-align: center;
+}
+.popup a {
+    color: #FFD57C;
+}
+.popup a:hover {
+    color: #ffb109;
+}
+#confirm {
+    display: block;
+    width: 100px;
+    position: relative;
+    margin: 10px auto;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: DTF;
+    border: none;
+    padding: 8px 0;
+}
+#confirm:hover {
+    background-color: #ffbb00;
+    color: #ffffff;
+    cursor: pointer;
+}
 
 #map { 
     width: 100vw;
@@ -31,7 +72,7 @@ body {
     fill: rgb(82, 56, 48);
 }
 
-.zoomButton {
+.menuButton {
     width: 50px;
     height: 50px;
     display: flex;
@@ -39,23 +80,24 @@ body {
     justify-content: center;
     margin: 5px;
     position: absolute;
-    border: 1px solid rgb(82, 56, 48);
     background-color: rgb(255, 255, 255);
     color: rgb(82, 56, 48);
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
 }
-.zoomButton:hover {
+.menuButton:hover {
     background-color: rgb(201, 192, 189);
 }
-.zoomButton:active {
+.menuButton:active {
     background-color: rgb(170, 161, 158);
 }
 #zoomIn {
     top: 0;
-    border-radius: 5px 5px 0px 0px;
 }
 #zoomOut {
-    top: 51px;
-    border-radius: 0px 0px 5px 5px;
+    top: 55px;
+}
+#suggestions {
+    font-size: 20px;
+    top: 110px;
 }
