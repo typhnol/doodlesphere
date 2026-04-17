@@ -16,7 +16,7 @@ const panzoom = Panzoom(map, {
     contain: 'outside',
     cursor: 'grab',
     maxScale: 10,
-    minScale: 2
+    minScale: 1.5
 });
 
 var rects = map.querySelectorAll('rect');
