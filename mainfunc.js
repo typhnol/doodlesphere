@@ -15,7 +15,7 @@ const panzoom = Panzoom(map, {
     panOnlyWhenZoomed: false,
     contain: 'outside',
     cursor: 'grab',
-    maxScale: 10,
+    maxScale: 8,
     minScale: 1.5
 });
 
